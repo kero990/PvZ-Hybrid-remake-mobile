@@ -15,7 +15,7 @@ jobs:
     steps:
       - run: mkdir pck-file
       - run: |
-          get -qO "植物大战僵尸杂交版v0.6.1发布版.apk" https://tmp-hd101.vx-cdn.com/file-68be4b85ee2e4-68be7d2a6af0b/%E6%A4%8D%E7%89%A9%E5%A4%A7%E6%88%98%E5%83%B5%E5%B0%B8%E6%9D%82%E4%BA%A4%E7%89%88v0.6.1%E5%8F%91%E5%B8%83%E7%89%88.apk
+          wget -qO "植物大战僵尸杂交版v0.6.1发布版.apk" https://tmp-hd101.vx-cdn.com/file-68be4b85ee2e4-68be7d2a6af0b/%E6%A4%8D%E7%89%A9%E5%A4%A7%E6%88%98%E5%83%B5%E5%B0%B8%E6%9D%82%E4%BA%A4%E7%89%88v0.6.1%E5%8F%91%E5%B8%83%E7%89%88.apk
           mv 植物大战僵尸杂交版v0.6.1发布版.apk 植物大战僵尸杂交版v0.6.1发布版.zip
           unzip 植物大战僵尸杂交版v0.6.1发布版.zip
           mv assets pvz-project
