@@ -5,7 +5,7 @@ on:
 env:
   GODOT_VERSION: 4.4.1
   APP_NAME: "植物大战僵尸杂交版"
-  APP_VER: "0.4"
+  APP_VER: "0.6.1"
 permissions:
   contents: write
 jobs:
@@ -15,14 +15,14 @@ jobs:
     steps:
       - run: mkdir pck-file
       - run: |
-          wget -q https://f.odata.cc/get/jpshVEFJiK/植物大战僵尸杂交版v0.4发布版.apk
-          mv 植物大战僵尸杂交版v0.4发布版.apk 植物大战僵尸杂交版v0.4发布版.zip
-          unzip 植物大战僵尸杂交版v0.4发布版.zip
+          wget -q https://f.odata.cc/get/RNBSIbp0hK/植物大战僵尸杂交版v0.6.1发布版.apk
+          mv 植物大战僵尸杂交版v0.6.1发布版.apk 植物大战僵尸杂交版v0.6.1发布版.zip
+          unzip 植物大战僵尸杂交版v0.6.1发布版.zip
           mv assets pvz-project
           #PCK_PATH=$(find . -name "*.pck" | head -n1)
           #echo "PCK_PATH=$(find . -name "*.pck" | head -n1)" >> $GITHUB_ENV
-          wget -q https://github.com/GDRETools/gdsdecomp/releases/download/v1.0.0-rc.3/GDRE_tools-v1.0.0-rc.3-linux.zip
-          unzip GDRE_tools-v1.0.0-rc.3-linux.zip
+          wget -q https://github.com/GDRETools/gdsdecomp/releases/download/v2.0.0-beta.2/GDRE_tools-v2.0.0-beta.2-linux.zip
+          unzip GDRE_tools-v2.0.0-beta.2-linux.zip
           chmod +x gdre_tools.x86_64
           ./gdre_tools.x86_64 --headless --pck-create=./pvz-project --output=./pvz.pck --pck-version=2 --pck-engine-version=4.4.1
           rm $PCK_PATH
