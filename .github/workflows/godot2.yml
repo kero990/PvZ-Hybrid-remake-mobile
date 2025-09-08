@@ -22,10 +22,10 @@ jobs:
           #PCK_PATH=$(find . -name "*.pck" | head -n1)
           #echo "PCK_PATH=$(find . -name "*.pck" | head -n1)" >> $GITHUB_ENV
           wget -q https://github.com/GDRETools/gdsdecomp/releases/download/v2.0.0-beta.2/GDRE_tools-v2.0.0-beta.2-linux.zip
-          unzip GDRE_tools-v2.0.0-beta.2-linux.zip
+          unzip -q GDRE_tools-v2.0.0-beta.2-linux.zip
           chmod +x gdre_tools.x86_64
           ./gdre_tools.x86_64 --headless --pck-create=./pvz-project --output=./pvz.pck --pck-version=2 --pck-engine-version=4.4.1
-          rm $PCK_PATH
+          #rm $PCK_PATH
       - name: Upload Project Artifact
         uses: actions/upload-artifact@v4
         with:
